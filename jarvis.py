@@ -45,7 +45,7 @@ def parse_command(query: str) -> tuple[str, str]:
     normalized = normalize_command(raw)
     if normalized.startswith("jarvis "):
         normalized = normalized[len("jarvis ") :].strip()
-        raw = re.sub(r"^jarvis\s+", "", raw, flags=re.IGNORECASE).strip()
+        raw = re.sub(r"^jarvis[\s,]+", "", raw, flags=re.IGNORECASE).strip()
 
     if normalized in EXIT_COMMANDS:
         return ("exit", "")
