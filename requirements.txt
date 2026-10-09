@@ -1,0 +1,2 @@
+SpeechRecognition[audio]>=3.10.0
+wikipedia>=1.4.0
